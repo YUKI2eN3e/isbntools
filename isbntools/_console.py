@@ -115,7 +115,7 @@ def set_msconsole():
         except:
             continue
 
-    if WINDOWS and PY3 and sys.stdout.encoding not in ('cp65001', 'cp1252'):
+    if WINDOWS and PY3 and sys.stdout.encoding not in ('cp65001', 'cp1252', 'utf-8'):
         LOGGER.debug('sys.stdout.encoding is %s', sys.stdout.encoding)
         print('')
         print('    WARNING: your system is not prepared for Unicode.')
